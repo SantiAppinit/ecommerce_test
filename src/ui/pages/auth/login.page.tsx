@@ -1,19 +1,12 @@
 import React from 'react';
 import LoginComponent from '../../components/auth/login.component';
-import { useAppStore } from '../../../logic/store';
-import { CommonSchema } from '../../../logic/schemas/common.schema';
+import RootPage from '../root.page';
 
 const LoginPage = () => {
 
-    const isLoading = useAppStore((state: CommonSchema) => state.loading);
-
-    if(isLoading) {
-        return <div>loading...</div>
-    }
-
-    return (
-        <div><LoginComponent /></div>
-    )
+    return <RootPage>
+        <LoginComponent />
+    </RootPage>
 }
 
 export default LoginPage;

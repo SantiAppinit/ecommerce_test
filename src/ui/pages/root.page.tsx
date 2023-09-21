@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppStore } from '../../../logic/store';
-import { CommonSchema } from '../../../logic/schemas/common.schema';
+import { useAppStore } from '../../logic/store';
+import { CommonSchema } from '../../logic/schemas/common.schema';
 
 
 const RootPage = ({ children }: any) => {
@@ -12,7 +12,6 @@ const RootPage = ({ children }: any) => {
     }
 
     return <div>
-        Root page
         {children}
     </div>
 }

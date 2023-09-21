@@ -1,5 +1,5 @@
 import React from 'react';
-import RootPage from './root.page';
+import RootPage from '../root.page';
 import IndexComponent from '../../components/home/index.component';
 
 
