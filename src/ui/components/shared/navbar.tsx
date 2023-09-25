@@ -15,11 +15,6 @@ const NavbarComponent = () => {
                     navbarScroll
                 >
                     <Nav.Link>Home</Nav.Link>
-                    <Navbar.Collapse className="justify-content-end">
-                        <Navbar.Text>
-                            Cart
-                        </Navbar.Text>
-                    </Navbar.Collapse>
                 </Nav>
                 <Nav>
                     <Nav.Link href="#deets">

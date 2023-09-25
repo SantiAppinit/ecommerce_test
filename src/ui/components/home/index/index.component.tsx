@@ -15,14 +15,14 @@ const IndexComponent = () => {
     const setLoading = useAppStore((state: CommonSchema) => state.setLoading);
 
     const loadProducts = async (params?: FilterParams) => {
-        setLoading(true);
+        // setLoading(true);
         const products = await productsApi.getAll(params);
         setProducts(products);
-        setLoading(false);
+        // setLoading(false);
     }
 
     useEffect(() => {
-        // loadProducts();
+        loadProducts();
     }, []);
 
     const handleOrderBy = async (value: SortValue) => {
