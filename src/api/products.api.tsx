@@ -4,7 +4,11 @@ import http from "../utils/http/axios";
 const httpInstance = http();
 
 const getAll = async () => {
-    const response = await httpInstance.get<Array<Product>>('/products');
+    const response = await httpInstance.get<Array<Product>>('/products', {
+        params: {
+            
+        }
+    });
     return response.data;
 }
 

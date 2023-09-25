@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center .item {
+    width: 50%;
+}
+
+.wrap {
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+/** HOME PAGES **/
+
+.index-container .index-content {
+    
+}
+
+.index-container .index-content .index-content-carousel-container {
+    
+}
+
+/** HOME PAGES **/
+
+
+/** AUTH PAGES **/
+
+.login-container {
+    margin-top: 20%;
+}
+
+.login-container .login-content {
+    padding: 5%;
+}
+
+.login-container .login-content .login-content-title {
+    text-align: center;
+}
+
+.login-container .login-content .login-content-form {
+}
+
+.login-container .login-content .login-content-actions {
+    text-align: center;
+}
+
+.login-container .login-content .login-content-actions .btn-login {
+    width: 40%;
+}
+
+/** AUTH PAGES **/
+
+
+/** SHARED COMPONENTS **/
+
+.bar-filter {
+    background-color: #f8f9fa;
+    position: absolute;
+    right: 0;
+    top: 8%;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+.bar-filter .bar-filters-content {
+    position: relative;
+    padding: 50% 0 0 10%;
+    height: 100%;
+}
+
+.bar-filter .bar-filters-content .bar-filter-item {
+    position: relative;
+}
+
+/** SHARED COMPONENTS **/

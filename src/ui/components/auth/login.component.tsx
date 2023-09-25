@@ -3,7 +3,7 @@ import { useAppStore } from '../../../logic/store';
 import { AuthSchema } from '../../../logic/schemas/auth.schema';
 import authApi from '../../../api/auth.api';
 import { CommonSchema } from '../../../logic/schemas/common.schema';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Card, Form } from 'react-bootstrap';
 
 const LoginComponent = () => {
 
@@ -20,21 +20,30 @@ const LoginComponent = () => {
     }
 
     return (
-        <Container>
-            <Form>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="name@example.com" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Button variant="primary" onClick={useLogin} >Log in</Button>
-                </Form.Group>
-            </Form>
-        </Container>
+        <div className='login-content'>
+            <Card>
+                <Card.Body>
+                    <div className='login-content-title'>
+                        <h2>Log In</h2>
+                    </div>
+                    <div className='login-content-form'>
+                        <Form>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Email address</Form.Label>
+                                <Form.Control type="email" placeholder="name@example.com" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="name@example.com" />
+                            </Form.Group>
+                        </Form>
+                    </div>
+                    <div className='login-content-actions'>
+                        <Button className='btn-login' variant="primary" onClick={useLogin} >Submit</Button>
+                    </div>
+                </Card.Body>
+            </Card>
+        </div>
 
     )
 }

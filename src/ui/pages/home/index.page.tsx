@@ -1,12 +1,16 @@
 import React from 'react';
-import RootPage from '../root.page';
-import IndexComponent from '../../components/home/index.component';
+import RootPage from './root.page';
+import IndexComponent from '../../components/home/index/index.component';
 
 
 const IndexPage = () => {
 
     return <RootPage>
-        <IndexComponent />
+        <div className='wrap'>
+            <div className='index-container'>
+                <IndexComponent />
+            </div>
+        </div>
     </RootPage>
 }
 
