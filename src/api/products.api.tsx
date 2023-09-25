@@ -1,12 +1,13 @@
+import { FilterParams } from "../models/filter.model";
 import { Product } from "../models/product.model";
 import http from "../utils/http/axios";
 
 const httpInstance = http();
 
-const getAll = async () => {
+const getAll = async (params?: FilterParams) => {
     const response = await httpInstance.get<Array<Product>>('/products', {
         params: {
-            
+            ...params
         }
     });
     return response.data;
@@ -36,5 +37,6 @@ export default {
     getAll,
     getById,
     add,
+    update,
     remove
 }
