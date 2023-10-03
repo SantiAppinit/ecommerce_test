@@ -3,36 +3,25 @@ import CarouseComponent from './carousel.component';
 import FilterByComponent from './filter-by.component';
 import ProductListComponent from './products/product-list.component';
 import { SortValue } from '../../../../models/enums/sort.enum';
-import productsApi from '../../../../api/products.api';
 import { useAppStore } from '../../../../logic/store';
 import { ProductSchema } from '../../../../logic/schemas/product.schema';
-import { CommonSchema } from '../../../../logic/schemas/common.schema';
-import { FilterParams } from '../../../../models/filter.model';
 
 const IndexComponent = () => {
 
-    const setProducts = useAppStore((state: ProductSchema) => state.setProducts);
-    const setLoading = useAppStore((state: CommonSchema) => state.setLoading);
-
-    const loadProducts = async (params?: FilterParams) => {
-        setLoading(true);
-        const products = await productsApi.getAll(params);
-        setProducts(products);
-        setLoading(false);
-    }
+    const getProducts = useAppStore((state: ProductSchema) => state.getProducts);
 
     useEffect(() => {
-        // loadProducts();
+        getProducts();
     }, []);
 
     const handleOrderBy = async (value: SortValue) => {
-        await loadProducts({
+        getProducts({
             sort: value
         })
     }
     
     const handleLimitBy = async (value: number) => {
-        await loadProducts({
+        getProducts({
             limit: value
         })
     }

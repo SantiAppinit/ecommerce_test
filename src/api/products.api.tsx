@@ -33,10 +33,15 @@ const remove = async (id: number) => {
     return response.data;
 }
 
+const getProductCategories = async () => {
+    const response = await httpInstance.get<Array<Product>>('/products');
+    return response.data;
+}
+
 export default {
     getAll,
     getById,
     add,
     update,
-    remove
+    remove,
 }
