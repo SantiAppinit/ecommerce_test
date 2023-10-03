@@ -10,6 +10,7 @@ import { StoreType } from "./slices";
 export const useAppStore = create<StoreType>((...args) => ({
     ...createAuthSlice(...args),
     ...createCartSlice(...args),
+    ...createProductSlice(...args),
     ...createCommonSlice(...args),
-    ...createProductSlice(...args)
+    ...createCommonSlice(...args),
 }))

@@ -13,20 +13,20 @@ const FilterByComponent = ({ handleOrderBy, handleLimitBy }: Props) => {
         <Container fluid>
             <Nav defaultActiveKey="/home" as="ul" className="justify-content-end">
                 <NavDropdown title="Order by" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action4" onClick={() => handleOrderBy(SortValue.asc)}>
+                    <NavDropdown.Item onClick={() => handleOrderBy(SortValue.asc)}>
                         Asc
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5" onClick={() => handleOrderBy(SortValue.desc)}>
+                    <NavDropdown.Item onClick={() => handleOrderBy(SortValue.desc)}>
                         Desc
                     </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Limit" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action4" onClick={() => handleLimitBy(5)}>
+                    <NavDropdown.Item onClick={() => handleLimitBy(5)}>
                         5
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5" onClick={() => handleLimitBy(10)}>
+                    <NavDropdown.Item onClick={() => handleLimitBy(10)}>
                         10
                     </NavDropdown.Item>
                 </NavDropdown>

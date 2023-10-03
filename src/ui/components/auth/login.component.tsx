@@ -8,15 +8,12 @@ import { Button, Card, Form } from 'react-bootstrap';
 const LoginComponent = () => {
 
     const useSetUser = useAppStore((state: AuthSchema) => state.setUser);
-    const useSetLoading = useAppStore((state: CommonSchema) => state.setLoading);
 
     const useLogin = async () => {
-        useSetLoading(true);
         const result = await authApi.login("santi", "test");
         useSetUser({
             name: "Santi"
         })
-        useSetLoading(false);
     }
 
     return (

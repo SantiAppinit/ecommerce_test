@@ -6,7 +6,7 @@ const NavbarComponent = () => {
 
     return (<Navbar expand="lg" className="bg-body-tertiary" sticky="top">
         <Container fluid>
-            <Navbar.Brand href="#">Proyecto de 2 hrs</Navbar.Brand>
+            <Navbar.Brand>Proyecto de 2 hrs</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
@@ -17,7 +17,7 @@ const NavbarComponent = () => {
                     <Nav.Link>Home</Nav.Link>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#deets">
+                    <Nav.Link>
                         <FaShoppingCart />
                     </Nav.Link>
                 </Nav>

@@ -10,18 +10,14 @@ const ProductListComponent = () => {
     const products = useAppStore((state: ProductSchema) => state.products);
 
     const renderItem = (p: Product) => {
-        return <Col md={4}>
-            <Container>
-                <ProductItemComponent product={p} />
-            </Container>
-        </Col>
+        return <Col key={p.id} md={4}><ProductItemComponent product={p} /></Col>
     }
 
     return (
         <div>
             <Container fluid="md">
                 <Row>
-                    {products.map((p) => renderItem(p))}
+                    {products.map((p: Product) => renderItem(p))}
                 </Row>
             </Container>
         </div>
