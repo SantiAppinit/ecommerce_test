@@ -1,7 +1,12 @@
-import React from "react";
+import RootPage from "./root.page";
+import CartComponent from "../../components/home/cart/cart.component";
 
 const CartPage = () => {
-  return <div>Cart page index</div>;
+  return (
+    <RootPage>
+      <CartComponent />
+    </RootPage>
+  );
 };
 
 export default CartPage;
